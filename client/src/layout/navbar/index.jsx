@@ -117,7 +117,9 @@ function Navbar() {
                     </NavLink>
                   </div>
                   <div onClick={() => setIsOpen(!isopen)} className="icon">
-                    <i className="fa-solid fa-basket-shopping"></i>
+                    <NavLink to={'/wish'}>
+                      <i className="fa-solid fa-basket-shopping"></i>
+                    </NavLink>
                   </div>
                   <div onClick={() => setIsOpen(!isopen)} className="icon">
                     <NavLink to={'/wish'}>
