@@ -1,0 +1,38 @@
+#ab{
+    .swiper-button-prev:after{
+        display: none;
+    }
+    .swiper-button-next:after {
+        display: none;
+    }
+    .swiper{
+        .box1212{
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            gap: 10px;
+            .imgboxx1212{
+                img{
+                    border-radius: 100%;
+                }
+                width: 80px ;
+            }
+            .text1212{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 10px;
+                .title1212{
+                    font-size: 22px;
+                }
+                .info1212{
+                    opacity: 80%;
+                    max-width: 190px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
