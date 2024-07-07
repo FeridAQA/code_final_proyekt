@@ -1,3 +1,4 @@
+import config from '../../assets/back_usl';
 import React, { useEffect, useState } from 'react'
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
@@ -30,7 +31,7 @@ function Profil() {
 
     const UpdateUserName = async (values) => {
         try {
-            const res = await axios.put(`http://localhost:3000/user/username/${User.userId}`, { username: values.username });
+            const res = await axios.put(`${config.BASE_URL}/user/username/${User.userId}`, { username: values.username });
             console.log("UpdateImage response:", res);
             setShowForm_name(false)
         } catch (error) {
@@ -39,7 +40,7 @@ function Profil() {
     };
     const UpdateImage = async (values) => {
         try {
-            const res = await axios.put(`http://localhost:3000/user/image/${User.userId}`, { image: values.image });
+            const res = await axios.put(`${config.BASE_URL}/user/image/${User.userId}`, { image: values.image });
             console.log("UpdateImage response:", res);
             setShowForm_img(false);
         } catch (error) {
@@ -48,7 +49,7 @@ function Profil() {
     };
     const UpdateInfo = async (values) => {
         try {
-            const res = await axios.put(`http://localhost:3000/user/info/${User.userId}`, { info: values.info });
+            const res = await axios.put(`${config.BASE_URL}/user/info/${User.userId}`, { info: values.info });
             console.log("UpdateImage response:", res);
             setShowForm_info(false);
             } catch (error) {

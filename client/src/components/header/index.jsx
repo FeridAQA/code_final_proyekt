@@ -1,3 +1,6 @@
+import config  from '../../assets/back_usl'
+
+
 import React, { useEffect, useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -19,7 +22,7 @@ export default function Header() {
   const [header, setHeader] = useState([])
   const [loading, setLoading] = useState(false)
   const get_header = async () => {
-    const res = await axios.get('http://localhost:3000/header')
+    const res = await axios.get(`${config.BASE_URL}/header`)
     const data = res.data.data
     setHeader(data)
     console.log(data);

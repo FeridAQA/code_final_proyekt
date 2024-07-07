@@ -1,3 +1,4 @@
+import config  from '../assets/back_usl'
 import { createContext, useContext, useState } from "react";
 import useLocalStroge from "../hook/useLocalStroge";
 import axios from "axios";
@@ -62,10 +63,10 @@ export const UserProvider = ({ children }) => {
     }
 
     async function putBasket (basket,id) {
-        const res=await axios.put(`http://localhost:3000/user/basket/${id}` ,{basket:basket})
+        const res=await axios.put(`${config.BASE_URL}/user/basket/${id}` ,{basket:basket})
     }   
     async function putWish (wishlist,id) {
-        const res=await axios.put(`http://localhost:3000/user/wish/${id}` ,{wishlist:wishlist})
+        const res=await axios.put(`${config.BASE_URL}/user/wish/${id}` ,{wishlist:wishlist})
     }   
     ///
 

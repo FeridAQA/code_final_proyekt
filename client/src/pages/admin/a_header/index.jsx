@@ -1,3 +1,4 @@
+import config from '../../../assets/back_usl';
 import axios from 'axios';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import React, { useEffect, useState } from 'react';
@@ -9,7 +10,7 @@ const [loading, setLoading] = useState(false)
   ///// header
   const [header, setHeader] = useState([])
   const get_header = async () => {
-    const res = await axios.get('http://localhost:3000/header')
+    const res = await axios.get(`${config.BASE_URL}/header`)
     const data = res.data.data
     setHeader(data)
     console.log(data);
@@ -20,11 +21,11 @@ const [loading, setLoading] = useState(false)
   }, [])
 
   const post_header = async (data) => {
-    await axios.post(`http://localhost:3000/header/`,data)
+    await axios.post(`${config.BASE_URL}/header/`,data)
     get_header()
   }
   const del_header = async (id) => {
-    await axios.delete(`http://localhost:3000/header/${id}`)
+    await axios.delete(`${config.BASE_URL}/header/${id}`)
     get_header()
   }
   //// header end

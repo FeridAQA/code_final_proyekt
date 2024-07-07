@@ -1,3 +1,4 @@
+import config from '../../assets/back_usl';
 import axios from 'axios';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import React, { useState } from 'react';
@@ -15,7 +16,7 @@ function Login() {
 
   const PostData = async (data) => {
     try {
-      const res = await axios.post('http://localhost:3000/user/login', data);
+      const res = await axios.post(`${config.BASE_URL}/user/login`, data);
       console.log(res.data);
       setMessage(res.data.message);
 

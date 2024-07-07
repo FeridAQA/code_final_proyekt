@@ -1,3 +1,5 @@
+import config  from '../../assets/back_usl'
+
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -19,7 +21,7 @@ export default function User_commet() {
 
     const [user_comme, setuser_comme] = useState([])
     const get_user_co = async () => {
-        const res = await axios.get('http://localhost:3000/user')
+        const res = await axios.get(`${config.BASE_URL}/user`)
         const data = res.data.data
         setuser_comme(data)
         console.log('asassa', data);

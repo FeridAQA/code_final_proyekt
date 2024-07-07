@@ -1,3 +1,4 @@
+import config from '../../../assets/back_usl';
 import axios from 'axios'
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import React, { useEffect, useState } from 'react'
@@ -7,7 +8,7 @@ import './index.scss'
 function Product_edit() {
     const [product, setProduct] = useState([])
     const get_product = async () => {
-        const res = await axios.get('http://localhost:3000/product')
+        const res = await axios.get(`${config.BASE_URL}/product`)
         const data = res.data.data
         setProduct(data)
         console.log(data);
@@ -16,11 +17,11 @@ function Product_edit() {
         get_product()
     }, [])
     const axiosDelete = async (id) => {
-        await axios.delete(`http://localhost:3000/product/${id}`)
+        await axios.delete(`${config.BASE_URL}/product/${id}`)
         get_product()
     }
     const post_Product = async (data) => {
-        await axios.post(`http://localhost:3000/product/`, data)
+        await axios.post(`${config.BASE_URL}/product/`, data)
         get_product()
     }
 

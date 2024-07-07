@@ -1,3 +1,4 @@
+import config from '../../assets/back_usl'
 import React, { useEffect, useState } from 'react'
 import './index.scss'
 import { useParams } from 'react-router-dom'
@@ -7,7 +8,7 @@ function Detail() {
     const [product, setProduct] = useState([])
     const { id } = useParams()
     const axiosAll = async () => {
-        const res = await axios.get(`http://localhost:3000/product/${id}`)
+        const res = await axios.get(`${config.BASE_URL}/product/${id}`)
         const data = res.data.data
         setProduct(data)
         // console.log(data);

@@ -1,3 +1,4 @@
+import config from '../../assets/back_usl';
 import React, { useState } from 'react'
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
@@ -12,7 +13,7 @@ function Register() {
 
     const PostData = async (data) => {
         try {
-            await axios.post('http://localhost:3000/user/register', data)
+            await axios.post(`${config.BASE_URL}/user/register`, data)
             navigate('/login');
         } catch (error) {
             console.log(error);

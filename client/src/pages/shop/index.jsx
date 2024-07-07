@@ -1,3 +1,4 @@
+import config from '../../assets/back_usl'
 import React, { useEffect, useState } from 'react'
 import './index.scss'
 import axios from 'axios'
@@ -14,7 +15,7 @@ function Shop() {
     const [product, setProduct] = useState([])
 
     const get_product = async () => {
-        const res = await axios.get('http://localhost:3000/product')
+        const res = await axios.get(`${config.BASE_URL}/product`)
         setProduct(res.data.data)
     }
     useEffect(() => {

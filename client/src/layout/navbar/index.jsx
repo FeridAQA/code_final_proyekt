@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './index.scss'
 
-import titimg from '../../img/Inci_logo_4th.png'
+import titimg from '../../img/denticare-logo-inv.png'
 import { Link, NavLink } from 'react-router-dom'
 import { useUser } from '../../context/userContext'
 
@@ -23,7 +23,7 @@ function Navbar() {
                   <img src={titimg} alt="" />
                 </div>
                 <div className="name">
-                  <p>İnci Shop</p>
+                  <p>UĞUR</p>
                 </div>
               </div>
               <div className="links">
