@@ -1,5 +1,5 @@
 const config = {
-    BASE_URL:'https://two1-gunluk-13444.onrender.com'
+    BASE_URL:'https://code-final-proyekt.onrender.com'
   };
   
   export default config;
