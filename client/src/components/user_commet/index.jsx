@@ -24,7 +24,7 @@ export default function User_commet() {
         const res = await axios.get(`${config.BASE_URL}/user`)
         const data = res.data.data
         setuser_comme(data)
-        console.log('asassa', data);
+        console.log('ehmed', data);
     }
     useEffect(() => {
         get_user_co()
