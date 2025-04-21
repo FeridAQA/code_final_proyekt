@@ -41,7 +41,7 @@
             gap: 10px;
 
             .tit_img {
-              width: 40px;
+              width: 160px;
             }
 
             p {
@@ -113,10 +113,11 @@
               gap: 10px;
 
               .tit_img {
-                width: 40px;
+                width: 160px;
               }
 
               p {
+                display: none;
                 font-size: 32px;
                 font-weight: 900;
 

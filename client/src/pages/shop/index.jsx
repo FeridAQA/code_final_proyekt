@@ -35,7 +35,7 @@ function Shop() {
                 <div className="title">
                     <div className="box_for_position">
                         <div className="text">
-                            <h2>Xeyrli Alışverişlər</h2>
+                            <h2>Shop</h2>
                             <p>Appropriately empower dynamic leadership skills after business portals. Globally myocardinate interactive supply chains with distinctive quality vectors. Globally revolutionize global sources through interoperable services.</p>
                         </div>
                     </div>
