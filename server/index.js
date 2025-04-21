@@ -15,7 +15,7 @@ app.use("/user", userRouter)
 app.use("/product", productRouter)
 
 
-mongoose.connect('mongodb+srv://feridd:feridd@cluster0.o4zo8na.mongodb.net/')
+mongoose.connect('mongodb+srv://fer2004id:IKWyhSAGF5uxdzb5@cluster0.xihzsda.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
     .then(() => console.log("DB connet"))
     .catch(() => console.log(" not DB connet"))
 
